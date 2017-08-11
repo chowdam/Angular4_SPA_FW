@@ -1,4 +1,10 @@
+
 import { Component } from '@angular/core';
+
+
+import { FrameworkConfigService, FrameworkConfigSettings } from '../fw/services/framework-config.service';
+import { MenuService } from '../fw/services/menu.service';
+import { initialMenuItems } from './app.menu';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +12,26 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'Angular4 Responsive SPA  Application';
+  constructor(
+    private frameworkConfigService: FrameworkConfigService,
+    private menuService: MenuService
+
+  ) {
+    let config: FrameworkConfigSettings = {
+      socialIcons: [
+        { imageFile: 'assets/social-fb-bw.png', alt: 'Facebook', link: '#facebook' },
+        { imageFile: 'assets/social-google-bw.png', alt: 'Google +', link: '#google' },
+        { imageFile: 'assets/social-twitter-bw.png', alt: 'Twitter', link: '#twitter' }
+      ],
+      showLanguageSelector: false,
+      showUserControls: true,
+      showStatusBar: true,
+      showSocialIcons: false,
+      showStatusBarBreakpoint: 800
+    };
+
+    frameworkConfigService.configure(config);
+    menuService.items = initialMenuItems;
+  }
 }

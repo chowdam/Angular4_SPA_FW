@@ -1,0 +1,23 @@
+<!-- <div class="submenu">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active">Home</li>
+  </ol>
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item active">Library</li>
+  </ol>
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item"><a href="#">Library</a></li>
+    <li class="breadcrumb-item active">Data</li>
+  </ol>
+</div> -->
+<!-- vertical menu goes here -->
+
+<fw-menu *ngIf="menuService.isVertical && screenService.isLarge() || menuService.showingLeftSideMenu && !screenService.isLarge()"
+  class="vertical-menu">
+</fw-menu>
+<!-- Body Content here -->
+<div class="body-style">
+  <router-outlet></router-outlet>
+</div>

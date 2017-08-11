@@ -21,8 +21,16 @@
     "@angular/platform-browser": "^4.0.0",
     "@angular/platform-browser-dynamic": "^4.0.0",
     "@angular/router": "^4.0.0",
-    "core-js": "^2.4.1",
+    "@types/core-js": "^0.9.42",
+    "bootstrap": "^3.3.7",
+    "classlist.js": "^1.1.20150312",
+    "core-js": "^2.5.0",
+    "es5-shim": "^4.5.9",
+    "es6-shim": "^0.35.3",
+    "font-awesome": "^4.7.0",
+    "intl": "^1.2.5",
     "rxjs": "^5.4.1",
+    "web-animations-js": "^2.3.1",
     "zone.js": "^0.8.14"
   },
   "devDependencies": {
